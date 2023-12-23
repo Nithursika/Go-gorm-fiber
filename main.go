@@ -2,8 +2,8 @@ package main
 
 import (
 	"log"
-	"youtube/database"
 
+	"bitbucket.org/nithursika/go-fiber-tutorial/database"
 	"github.com/gofiber/fiber/v2"
 )
 
