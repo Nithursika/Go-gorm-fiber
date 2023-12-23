@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"youtube/database"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -11,6 +12,7 @@ func Welcome(c *fiber.Ctx) error {
 }
 
 func main() {
+	database.ConnectDb()
 	app := fiber.New()
 	app.Get("/api", Welcome)
 	log.Fatal(app.Listen(":3000"))

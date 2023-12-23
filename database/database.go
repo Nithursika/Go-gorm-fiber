@@ -1,4 +1,4 @@
-package daabase
+package database
 
 import (
 	"log"
