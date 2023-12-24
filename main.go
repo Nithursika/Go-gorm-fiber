@@ -28,6 +28,11 @@ func setupRoutes(app *fiber.App) {
 	app.Put("/api/products/:id", routes.UpdateProduct)
 	app.Delete("/api/products/:id", routes.DeleteProduct)
 
+	//order endpoint
+	app.Post("/api/order", routes.CreateOrder)
+	app.Get("/api/order", routes.GetOrders)
+	app.Get("/api/order/:id", routes.GetOrder)
+
 }
 func main() {
 	database.ConnectDb()
