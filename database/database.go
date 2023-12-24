@@ -1,9 +1,10 @@
-package daabase
+package database
 
 import (
 	"log"
 	"os"
 
+	"bitbucket.org/nithursika/go-fiber-tutorial/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -26,7 +27,8 @@ func ConnectDb() {
 	log.Println("Connected to the database successfully")
 	db.Logger = logger.Default.LogMode(logger.Info)
 	log.Println("Running Migrations")
-	//todo:addmigration
+	//addmigration
+	db.AutoMigrate(&models.User{}, &models.Product{}, &models.Order{})
 
 	Database = DBInstance{Db: db}
 }
