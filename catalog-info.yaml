@@ -6,4 +6,5 @@ metadata:
     github.com/project-slug: Nithursika/Go-gorm-fiber
 spec:
   type: other
+  owner: Nithursika
   lifecycle: unknown
