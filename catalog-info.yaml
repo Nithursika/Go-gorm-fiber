@@ -4,6 +4,8 @@ metadata:
   name: Go-gorm-fiber
   annotations:
     github.com/project-slug: Nithursika/Go-gorm-fiber
+    annotations:
+      pagerduty.com/integration-key: ${INTEGRATION-KEY}
 spec:
   type: other
   owner: Nithursika
